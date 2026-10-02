@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Débloquer eBoutik</title>
+<style>
+  :root { --pri:#5B4BFF; --encre:#101828; --discret:#667085; --fond:#f6f7fb; --ligne:#e4e7ec; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--fond); color:var(--encre); font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:440px; margin:0 auto; padding:28px 16px 40px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  p { color:var(--discret); margin:0 0 16px; }
+  .carte { background:#fff; border:1px solid var(--ligne); border-radius:18px; padding:16px; margin-bottom:14px; }
+  .btn { display:block; width:100%; text-align:center; border:0; border-radius:14px; padding:14px; font:700 16px system-ui,sans-serif; text-decoration:none; background:var(--pri); color:#fff; margin-bottom:12px; }
+  .cache { display:none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Débloquer eBoutik</h1>
+  <div id="avecCode">
+    <p>Touchez « Ouvrir eBoutik » : vous choisirez un nouveau mot de passe tout de suite.</p>
+    <a class="btn" id="ouvrir" href="#">Ouvrir eBoutik</a>
+    <div class="carte">
+      Ce lien ne marche que <b>sur le téléphone de la boutique</b>, et une seule fois. Si l'appli ne s'ouvre pas :
+      copiez le message de l'éditeur, puis dans eBoutik, « Mot de passe oublié ? » → collez-le → « Débloquer ».
+    </div>
+  </div>
+  <div id="sansCode" class="carte cache">Ce lien est incomplet : demandez-en un nouveau à l'éditeur sur WhatsApp.</div>
+</main>
+<script>
+  var code = new URLSearchParams(location.search).get('code') || '';
+  if (!/^[A-Za-z0-9_-]{20,}$/.test(code)) {
+    document.getElementById('avecCode').className = 'cache';
+    document.getElementById('sansCode').className = 'carte';
+  } else {
+    document.getElementById('ouvrir').href = 'intent://himaton.github.io/eboutik/debloquer?code=' + code +
+      '#Intent;scheme=https;package=com.eboutik.eboutik;end';
+  }
+</script>
+</body>
+</html>
