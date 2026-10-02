@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.eboutik.eboutik",
+      "sha256_cert_fingerprints": [
+        "B8:D0:42:B4:D2:56:0E:46:95:ED:C2:52:0F:4A:4C:A6:89:37:49:E2:4D:2A:21:E2:E7:C6:92:B0:85:D9:5F:50",
+        "6B:C1:3B:35:4C:D6:40:5E:70:8D:D2:58:B9:5C:C7:31:08:4C:E6:4B:35:B8:87:27:CB:30:06:4A:5A:38:E7:B7"
+      ]
+    }
+  }
+]
