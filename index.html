@@ -3,17 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>eBoutik</title>
+<title>eBoutik — Votre boutique dans votre téléphone</title>
+<meta name="description" content="eBoutik : l'application de gestion de boutique pour les commerçants du Niger. Ventes, stock, crédits clients, caisse, commandes WhatsApp et livreurs, sans Internet.">
 <style>
-  body { margin:0; background:#f6f7fb; color:#101828; font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  main { max-width:440px; margin:0 auto; padding:28px 16px; }
+  :root { --pri:#5B4BFF; --encre:#101828; --discret:#667085; --fond:#f6f7fb; --ligne:#e4e7ec; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--fond); color:var(--encre); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:28px 16px 48px; }
+  h1 { font-size:26px; line-height:1.25; margin:0 0 8px; }
+  h2 { font-size:19px; margin:28px 0 8px; }
+  a { color:var(--pri); }
+  table { border-collapse:collapse; width:100%; margin:8px 0 16px; font-size:15px; }
+  th, td { border:1px solid var(--ligne); padding:8px 10px; text-align:left; vertical-align:top; background:#fff; }
+  code { font:14px ui-monospace,Menlo,Consolas,monospace; background:#eef0f4; padding:1px 5px; border-radius:6px; }
+  hr { border:0; border-top:1px solid var(--ligne); margin:40px 0; }
+  ol, ul { padding-left:22px; }
+
+  .slogan { font-size:20px; color:var(--pri); font-weight:700; margin:0 0 18px; }
+  .carte { background:#fff; border:1px solid var(--ligne); border-radius:18px; padding:16px 20px; margin:16px 0; }
 </style>
 </head>
 <body>
 <main>
   <h1>eBoutik</h1>
-  <p>La gestion de boutique, simple et sans connexion. Pour toute question, écrivez à l'éditeur sur WhatsApp :
-    <a href="https://wa.me/22797412361">+227 97 41 23 61</a>.</p>
+  <p class="slogan">Votre boutique dans votre téléphone</p>
+  <p>eBoutik est une application Android de gestion de boutique, faite au Niger pour les commerçants d'ici :
+    ventes et monnaie à rendre, stock, crédits clients et relances, caisse, commandes WhatsApp et Facebook,
+    livreurs et colis expédiés. Elle marche sans Internet ; les données restent dans le téléphone et peuvent être
+    sauvegardées sur le Google Drive du commerçant.</p>
+  <div class="carte">
+    <b>Essai gratuit pendant 3 semaines.</b><br>
+    Pour l'installer ou pour toute question, écrivez à l'éditeur sur WhatsApp :
+    <a href="https://wa.me/22797412361">+227 97 41 23 61</a> · e-mail :
+    <a href="mailto:eboutik.ne@gmail.com">eboutik.ne@gmail.com</a>
+  </div>
+  <p><a href="/eboutik/confidentialite/">Politique de confidentialité</a> ·
+    <a href="/eboutik/confidentialite/#eboutik-privacy-policy-english">Privacy Policy</a></p>
+  <p style="color:var(--discret);font-size:14px">Éditeur : Abdoul Majid Hima, Niamey, Niger.</p>
 </main>
 </body>
 </html>
